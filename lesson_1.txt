@@ -1,0 +1,83 @@
+git commands:
+git init (initate a git repository on a folder)
+git clone (retrieves a remote repository)
+git log (see commit history)
+git diff (compare two different commits)
+git checkout (changes your current commit HEAD)
+
+Q1) How did viweing a diff between two versions help you
+spot the bug?
+
+A1) Using the command diff on bash or fc on cdm was helpful
+because it allowed me to compare two files and see ONLY the
+differences between them. Without diff I would have to have
+both files open and try to compare each line at a time.
+Diff -u appeard to be better than fc on windows, because it
+shows the changed lines between the two files intersected,
+while fc shows a bigger chunck of code at a time.
+
+Q2) How can the easy access of a file's history (log) make
+you a better programmer on the long run?
+
+A2) I'm not sure having access to a file's history allows me
+to learn more, but it definitly makes me a better programmer.
+This is because having a version control system not only allows
+for easier bug fixes, but having a history of all major changes
+also empowers me to try new/bold changes/features because of
+the security of having easier backups gives.
+In another words, without a file's history I might not try new
+things.
+
+Q3) In your opinion what are the pros and cons of choosing a manual
+saving version control system as git, instead of an automatic
+saving program such as google docs?
+
+A3) I guess the con of manual is that if the developer is responsable 
+for making the commit, it could lead to some bad judgment calls 
+resulting in either too long or too short checkpoints, compromissing 
+the readability of them. 
+But while the possibility of non-useful checkpoints may occur on the 
+manual saving approach, it is guaranteed to happen on the automatic. 
+The manual approach is the best, because it is the only way to make
+sure checkpoints are created based on logic differences made on a program.
+
+Q4) Why do you think some version control systems such as git allows
+you to save various files in one commit (checkpoint) while others
+systems treat each file separatly?
+
+A4) I think google docs and wikipedia, for example, have version control
+systems that were not intended to be used for developement, therefore
+there is no need no actually track various files simultaniosly, specially
+because since those systems have automatic saving, there is no way for
+the program to know when two distinct files would be synchronized.
+Git, on the other hand, was created with development in mind and the
+ability to commit various files and track all at once is mandatory, since
+different files import functions and statements from other files. The best
+example of the relationship between two distinct files and the
+importance of tracking them together is a html and css.
+
+Q5) How to use the commands git log and git diff help you visualize you file's history?
+
+A5) The command git log visualizes the whole commit history (starting from the
+HEAD) and the the command git diff shows the differences between two different
+commits. The use of both commands, together, allows the user to see the file's
+history and changes as the programs progresses.
+
+Q6) How can a VCS give you more confidence for making changes in your program that
+could 'break' something?
+
+A6) VCS gives a lot more confidence for trying to implement features and making big, bold
+changes in general simply because they provide tools that garuantee that if you break
+something or didn't like the changes/feature, you can easily go back in time without
+a sweat!
+I have been using git for just a couple of weeks, and I can already feel the empowered
+it gives me! It allows me to try new things that otherwise I wouldn't just because if
+things went wrong, fixing everything could be a pain.
+(risktaker)
+
+Q7) Why do you want to use git?
+
+A7) I want to use git to be a better programmer by being more risktaking and keeping 
+track of all of my future programs and project with git. Also, apparently git is the
+most used vcs used on the industry, so mastering it goes a long way on finding and
+keeping a job
