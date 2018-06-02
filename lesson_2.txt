@@ -5,25 +5,70 @@ All of the meta data necessary for git to work is stored in the .git directory,
 therefore initializing a git repository is the way for telling git that you
 want to track changes to that particular folder.
 
+Q2) How is the staging area different from the working directory and the repository?
 
-bitch
-
-
-
-
-How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
-How can you use the staging area to make sure you have one commit per logical
+
+
+A2) The working directory is the state of your files on your hard drive, it's the
+'normal' stade of files. 
+Repository is an invisible list of commits, where each commit contains the state
+of commited files at the time the commit was made and if summoned (using git checkout),
+the state of the files will be loaded into the working directory.
+Staging area is between the working directory and the repository. It exists so that
+the developer can decide which files will be commited from the working directory. When
+git commit is ran, it doesn't commit all of the files from the working directory, it
+actually only commits files being delibery tracked (therefore on the staging area).
+
+Q3) How can you use the staging area to make sure you have one commit per logical 
 change?
 
-What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
 
-How do the diagrams help you visualize the branch structure?
 
-What is the result of merging two branches together? Why do we represent it in
+A3) You can change files all you want in the working directory, perhaps having even more
+than one logical change. But updated files will only be commited if they are in the
+staging area. Therefore you can use the staging are to make sure only one logical change
+is commited at a time by only running 'git add' on the file you actually wanto to commit.
+This will allow for the commit to have one change, even if all files in your working
+directory were changed.
+
+Q4) What are some situations when branches would be helpful in keeping your history 
+organized? 
+How would branches help?
+
+A4) Branches will be helpfull when I'm implementing either a new feature, making changes that
+are too big/complex for just one commit or making some tests. In all these situations, making
+a specific branch is a good idea since those changes will not appear on the history of the
+master branch, allowing for a clean history until/if any of those branches will ever be
+merged into the master branch.
+
+Q5) How do the diagrams help you visualize the branch structure?
+
+A5) When a simple 'git log' is called, the commit's history is displayed starting from the
+HEAD commit all the way down to it's oldest parent. Every branch that might have existed
+along the way and that was eventually merged into the current branch will appear on the log
+list by commit date. This means that there might be some mixed commits of different
+branches along with each other that may have no direct connection.
+Using a diagram (--graph and the optional --oneline) are great ways of displaying a branch
+log respecting the 'real' branch history. The log separates the branches commits and makes
+it easier to understand the whole history.
+I'm looking forward to using this command a lot.
+
+
+Q6) What is the result of merging two branches together? 
+Why do we represent it in 
 the diagram the way we do?
 
-What are the pros and cons of Git’s automatic merging vs. always doing merges
+
+
+A6) The result of the merge of two branches is basicly the result of the original file
+(the last common file for the two branches) with all the additions from any of the branches
+and with the removals of any of the branches.
+The diagram is a great way to see the history of commits (read Q/A5).
+
+Q7) What are the pros and cons of Git’s automatic merging vs. always doing merges 
 manually?
+
+
+A7) To be continued
