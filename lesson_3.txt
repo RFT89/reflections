@@ -1,6 +1,19 @@
+git remote (shows all available remotes from the repository, similar to 'git branch')
+git remote add <name> <url>  (creates a remote repository)
+git push <remote> <branch>  (push all changes from branch into the remote)
+git pull <remote> <branch>  (pull all changes from remote branch into local)
+
+
 Q1) When would you want to use a remote repository rather than keeping all your work
 local?
 
+A1) I think always. Having a remote repository seems like good practice, since it
+basicly behaves like a backup.
+A remote may not seem like a good idea when working on a private project that nobody
+should see, but github and probably other similar services (looking at you GitLab and
+BitBucket) offer a way to create private remotes.
+On all other common situations, like an open source project, I guess having a remote
+is a must.
 
 Q2) Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
