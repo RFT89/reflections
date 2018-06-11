@@ -18,9 +18,29 @@ is a must.
 Q2) Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
+A2) 
 
 Q3) Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
+
+A3) Branches are very different from forks and clones. A branch is a label on commits
+of a repository that allows the developer to create "parallel commits" that don't interact
+directly on the main branch (called master). This makes branchs a powerful way of trying
+new features without risking breaking the main, functional program. Whenever a bug is fixed
+on the master branch, it can be merged into the feature brach to allow that branch to be
+bug free while developing it. This prevents the developer from having to manually fix the
+same bug more than once. Similarly, when a feature branch is completed, it can be merged back
+into the master to incorporate it's feature on the official program.
+
+Clone is a git command that allows the user to copy a whole repository from either github
+or from his own local repository.
+
+Fork is technically clonning a repository. The difference between fork and clone, is that
+a fork is a clone command that is performed only on github server's, clonning a remote repo
+into your own github profile. If a developer wish to have the same repository from another
+github account developer (he does't intend to push commits to the original repo, but rather
+have his own) he can fork that repo and than he clone it to his own local machine using 
+git clone on his own github profile.
 
 
 Q4) What is the benefit of having a copy of the last known state of the remote
@@ -30,6 +50,41 @@ stored locally?
 Q5) How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
+A5) Collaborate without git and github would be very very difficult. 
+Git allow for version control, which in it's own rights makes development easier and allows
+programmers to be more bold on their changes (see lesson_1 reflections).
+Github on the other hand, allows different developers with different versions of the same
+program to "easily" make those version compatible dynamically.
+
+Without those two, collaborating would be a pain! A lot of dev time would be spend on
+manually keeping track of your files version, resulting in both slower development and
+in more cowardly changes.
+Absence of github would make open-source projects almost impossible. Not only the pull
+request feature seems really powerful, it social features, like adding messages and new
+commits on the go make everything smoother.
 
 Q6) When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
+
+A6) As I have seen on the last example of the course, the workflow of making changes to
+the project by creating and editing a separate branch, and asking for a pull request on
+those changes on github is more complicated than it would be if I were to just make changes
+directly into master or even just merging my feature branch on master and simply pushing it
+into github.
+
+The benefit with following this "complicated" workflow (pull master, checkout to feature
+branch, merge master to it, push branch to github and than pull request) is that it makes
+my changes explicited to other collaborators. It gives them the chance to actually check my
+suggested changes and than decide whether or not to incorporate them into master. This is
+definitly more transparent and friendly than simply merging my branch into master on local
+and than push master into remote. Even less transparent would be to not have a separete branch
+and simply make changes directly into master.
+This would make very hard for other collaborators to catch up with changes and wouldn't give
+other developers a chance to give their opinions.. so much for collaboration.
+
+So answering the questin, any time working on a team project or open source with other
+developers involved, I would have guessed that making changes to your own branch and "politly"
+asking for a pull request is the way to go. Having changes being made diretly to master or
+at least just merging changes from your branch directly into master is a more proper workflow
+when working on a solo project.
+
